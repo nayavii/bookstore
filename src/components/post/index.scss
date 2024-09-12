@@ -1,0 +1,66 @@
+.post {
+  $self: &;
+  width: 350px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #131313;
+  }
+
+  &__img {
+    width: 350px;
+    height: 250px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 10px;
+  }
+
+  &_black {
+    #{$self}__title,
+    #{$self}__text {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .post {
+    width: 30%;
+
+    &__img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .post {
+    width: 47%;
+
+    &__img {
+      width: 100%;
+      height: 240px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
+}

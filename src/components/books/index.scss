@@ -1,0 +1,38 @@
+.books {
+  $self: &;
+  padding-bottom: 80px;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  &_black {
+    background-color: #131313;
+
+    #{$self}__title,
+    #{$self}__text {
+      color: #ffffff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .books {
+    &__wrapper {
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .books {
+    &__wrapper {
+      gap: 50px;
+    }
+  }
+}
+
+
+

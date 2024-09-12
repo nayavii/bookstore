@@ -1,0 +1,20 @@
+.notFound {
+  height: calc(100vh - 100px);
+  overflow-x: hidden;
+  background: #000 url("./images/404.jpg") no-repeat center center / cover;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  &__title {
+    font-size: 150px;
+  }
+
+  &__text {
+    font-size: 50px;
+    margin: 100px 0;
+  }
+
+}

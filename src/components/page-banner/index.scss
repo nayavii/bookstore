@@ -1,0 +1,22 @@
+.page-banner {
+  width: 100%;
+
+  // background: #292929 url(./images/banner.jpg) no-repeat center bottom / cover;
+
+
+  img {
+    height: 250px;  
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  &_black {
+    background-color: #131313;
+  
+  }
+
+  .small {
+    height: 100px;
+  }
+}

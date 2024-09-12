@@ -1,0 +1,48 @@
+.profile-info {
+  padding: 100px 0;
+  $self: &;
+
+  &__wrapper {
+    background-color: #8aaae6;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    color: #fff;
+  }
+
+  &__label {
+    color: #fff;
+  }
+
+  &__input {
+    width: 100%;
+    margin: 10px 0 30px;
+    background-color: #fff;
+    color: #8aaae6;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .profile-info {
+    padding: 80px 0;
+
+    &__wrapper {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-info {
+    padding: 60px 0;
+
+    &__wrapper {
+      width: 90%;
+    }
+  }
+}

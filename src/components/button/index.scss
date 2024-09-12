@@ -1,0 +1,61 @@
+.button {
+  $self: &;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 10px 35px;
+  transition: all 0.5s ease;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+
+  &_fill {
+    background-color: #8aaae6;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #4669a9;
+    }
+  }
+
+  &_outline {
+    padding: 8px 35px;
+    background-color: transparent;
+    border: 2px solid #8aaae6;
+    color: #8aaae6;
+
+    &:hover {
+      border: 2px solid #4669a9;
+      color: #4669a9;
+    }
+  }
+
+  &_black {
+    &.button_fill {
+      background-color: #8aaae6;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #5b5b5b;
+      }
+    }
+
+    &.button_outline {
+      border: 2px solid #8aaae6;
+      color: #8aaae6;
+
+      &:hover {
+        border: 2px solid #5b5b5b;
+        color: #5b5b5b;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .button {
+    padding: 6px 35px;
+    font-size: 14px;
+    height: 40px;
+  }
+}

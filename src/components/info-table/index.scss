@@ -1,0 +1,20 @@
+.table {
+
+  $self: &;  
+
+&_black {
+    #{$self}__color {
+      background-color: #1f1f1f;
+      color: #ffffff;
+
+    }
+
+    #{$self}__color_light {
+      background-color: #282828;
+      color: #ffffff;
+
+    }
+  }
+
+
+}

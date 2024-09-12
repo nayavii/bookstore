@@ -1,0 +1,47 @@
+.fav-books {
+  $self: &;
+  padding: 80px 0 0;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  &__empty {
+    padding: 150px 0;
+    text-align: center;
+    border-top: 1px solid #8aaae6;
+    border-bottom: 1px solid #8aaae6;
+  }
+
+  &__text {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  &_black {
+    background-color: #131313;
+
+    #{$self}__title,
+    #{$self}__text, #{$self}__empty__text {
+      color: #ffffff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .fav-books {
+  
+    &__wrapper {
+      gap: 30px;
+    }
+  }
+
+}

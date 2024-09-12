@@ -1,0 +1,48 @@
+import "./index.scss";
+import { useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  getPostsByIdMiddleware
+} from "../../store/middleware/postMiddleware";
+import { useDispatch, useSelector } from "react-redux";
+import { Button } from "../button";
+import CustomizedTable from "../info-table";
+import { getBlackTheme, getPost } from "../../store/selectors";
+
+export const PostInfo = () => {
+  const isBlackTheme = useSelector(getBlackTheme);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { postId } = useParams();
+  const post = useSelector(getPost);
+
+  useEffect(() => {
+    dispatch(getPostsByIdMiddleware(postId));
+  }, [dispatch, postId]);
+
+  const handleBack = () => {
+    navigate(-1);
+  };
+
+  return (
+    <section className={`post-info ${isBlackTheme ? "post-info_black" : ""}`}>
+      <div className="container">
+        <div className="post-info__header">
+          <div className="post-info__left">
+            <h2 className="post-info__title title">{post?.title}</h2>
+            <p className="post-info__author">{post?.author}</p>
+          </div>
+
+          <Button title={"Back"} onClick={handleBack} />
+        </div>
+        <div className="post-info__wrapper">
+          <div className="post-info__img">
+            <img src={post?.image} alt="" />
+          </div>
+
+          <p className="post-info__text">{post?.text}</p>
+        </div>
+      </div>
+    </section>
+  );
+};

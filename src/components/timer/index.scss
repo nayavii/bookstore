@@ -1,0 +1,29 @@
+.timer {
+  margin: 20px 0 40px;
+
+  &__time {
+    color: #ffffff;
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .timer {
+    margin: 15px 0 30px;
+
+    &__time {
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timer {
+    margin: 15px 0 30px;
+
+    &__time {
+      font-size: 30px;
+    }
+  }
+
+}

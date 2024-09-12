@@ -1,0 +1,64 @@
+.register {
+  $self: &; 
+  position: fixed;
+  inset: 0;
+  background-color: #8aaae65b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+
+
+  &__wrapper {
+    width: 500px;
+    background-color: #fdfdfd;
+    padding: 50px 40px;
+    border-radius: 30px;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+
+
+  &__input {
+    width: 100%;
+    margin: 10px 0 15px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 15px 0 20px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+
+  &__text {
+  }
+  &__link {
+    margin-left: 5px;
+    color: #8aaae6;
+    cursor: pointer;
+  }
+
+  &_black {
+    background-color: #13131394;
+
+    #{$self}__wrapper {
+      background-color: #131313;
+    }
+
+    #{$self}__title, #{$self}__label, #{$self}__text{
+      color: #ffffff;
+    }
+
+    #{$self}__btn {
+
+    }
+  }
+}

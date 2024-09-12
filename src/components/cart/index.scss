@@ -1,0 +1,172 @@
+.cart {
+  $self: &;
+  padding: 80px 0 0;
+  min-height: 80vh;
+
+  &__wrapper {
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #8aaae6;
+    border-bottom: 1px solid #8aaae6;
+    padding: 40px 0;
+  }
+
+  &__books {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #8aaae6;
+    padding: 50px 0;
+    row-gap: 40px;
+  }
+
+  &__empty {
+    padding: 150px 0;
+    text-align: center;
+    border-top: 1px solid #8aaae6;
+    border-bottom: 1px solid #8aaae6;
+
+    &__text {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 25px;
+    font-weight: 500;
+
+    &__quantity {
+      margin: 0 0 0 340px;
+    }
+
+    &__delete {
+      margin-right: 30px;
+    }
+  }
+
+  &__totals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    border-bottom: 1px solid #8aaae6;
+
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__title {
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    &__value {
+      font-size: 23px;
+      color: #8aaae6;
+      font-weight: 500;
+    }
+  }
+
+  &_black {
+    background-color: #131313;
+
+    #{$self}__title,
+    #{$self}__text,
+    #{$self}__totals__title,
+    #{$self}__empty__text {
+      color: #ffffff;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cart {
+    padding: 60px 0 0;
+
+    &__header {
+      padding: 30px 0;
+    }
+
+    &__books {
+      padding: 40px 0;
+      row-gap: 30px;
+    }
+
+    &__empty {
+      padding: 80px 0;
+
+      &__text {
+        font-size: 25px;
+        margin-bottom: 40px;
+      }
+    }
+
+
+    &__text {
+      font-size: 20px;
+
+      &__quantity {
+        margin: 0 0 0 230px;
+      }
+    }
+
+    &__totals {
+      padding: 30px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cart {
+    padding: 40px 0 0;
+
+    &__header {
+      padding: 20px 0;
+    }
+
+    &__books {
+      padding: 20px 0;
+      row-gap: 30px;
+    }
+
+    &__empty {
+      padding: 60px 0;
+
+      &__text {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+    }
+
+
+    &__text {
+      font-size: 18px;
+
+      &__quantity {
+        margin: 0 0 0 130px;
+      }
+    }
+
+    &__totals {
+      padding: 30px 0;
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__value {
+        font-size: 18px;
+      }
+    }
+  }
+}

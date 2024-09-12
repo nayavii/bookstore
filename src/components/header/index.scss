@@ -1,0 +1,76 @@
+.header {
+  $self: &;
+  padding: 20px 0;
+  background-color: #ffffff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    padding: 10px 0 0;
+
+    img {
+      width: 150px;
+    }
+  }
+  &__menu {
+  }
+  &__list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__btn {
+    color: #111111;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: #8aaae6;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-badge {
+      position: absolute;
+      top: 15px;
+      right: -5px;
+      background-color: #8aaae6;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &_black {
+    background-color: #131313;
+    //   #{$self}
+
+    #{$self}__btn {
+      color: #ffffff;
+    }
+  }
+}

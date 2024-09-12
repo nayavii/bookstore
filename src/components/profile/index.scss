@@ -1,0 +1,63 @@
+.profile {
+  padding: 180px 0;
+  $self: &;
+
+  &__wrapper {
+    background-color: #8aaae6;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: #ffffff;
+    color: #8aaae6;
+    transition: all 0.5s linear;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &_black {
+    background-color: #131313;
+
+    #{$self}__wrapper {
+      background-color: #0a0a0a;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .profile {
+    padding: 80px 0;
+
+    &__wrapper {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    padding: 60px 0;
+
+    &__wrapper {
+      width: 90%;
+    }
+  }
+}

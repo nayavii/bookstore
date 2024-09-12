@@ -1,0 +1,21 @@
+.navBar {
+  $self: &; 
+  padding: 50px 0;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__search {
+    width: 100%;
+  }
+
+  &_black {
+    background-color: #131313;
+
+    #{$self}__search {
+      width: 100%;
+    }
+  }
+}
