@@ -19,6 +19,8 @@ export const Register = ({ setIsShowRegister, setIsShowLogin }) => {
 
   console.log(values);
 
+  const [errors, setErrors] = useState({});
+
   const inputRefName = useRef(null); // {current: null}
 
   useEffect(() => {

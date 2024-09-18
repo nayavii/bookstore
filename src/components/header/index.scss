@@ -15,8 +15,25 @@
       width: 150px;
     }
   }
-  &__menu {
+
+  &__menu__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
   }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
   &__list {
     display: flex;
     gap: 20px;
@@ -72,5 +89,49 @@
     #{$self}__btn {
       color: #ffffff;
     }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    &__burger {
+      display: block;
+    }
+
+    &__menu__wrapper {
+      display: none;
+      position: absolute;
+      top: 97px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+      padding: 50px 0;
+      z-index: 1000;
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+
+    &__logout {
+      margin: 0 auto;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+    &__btn {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    &__actions {
+      justify-content: center;
+    }
+
+
   }
 }

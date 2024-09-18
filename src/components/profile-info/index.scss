@@ -25,6 +25,14 @@
     background-color: #fff;
     color: #8aaae6;
   }
+
+  &_black {
+    background-color: #131313;
+
+    #{$self}__wrapper {
+      background-color: #0a0a0a;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {

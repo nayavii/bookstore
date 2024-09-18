@@ -45,6 +45,12 @@
     cursor: pointer;
   }
 
+  &__error {
+    margin-bottom: 25px;
+    color: #e68a8a;
+
+  }
+
   &_black {
     background-color: #13131394;
 

@@ -17,7 +17,7 @@ export const App = () => {
     dispatch(getNewReleasesBooksMiddleware());
     dispatch(getPostsMiddleware());
     dispatch(getUserInfoAction());
-  }, [dispatch]);
+  }, []);
 
   return (
     <BrowserRouter>

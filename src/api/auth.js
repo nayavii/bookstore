@@ -17,9 +17,9 @@ export const fetchToken = (email, password) => {
     .then((response) => {
       console.log(response);
       if (response.access && response.refresh) {
+        localStorage.setItem("isAuth", true);
         localStorage.setItem("accessToken", response.access);
         localStorage.setItem("refreshToken", response.refresh);
-        localStorage.setItem("isAuth", true);
       }
     })
     .catch((error) => console.log(error));

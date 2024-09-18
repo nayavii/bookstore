@@ -21,6 +21,8 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
 
   console.log(values);
 
+  const [error, setError] = useState("");
+
   const inputRefName = useRef(null); // {current: null}
 
   useEffect(() => {
@@ -33,17 +35,31 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
       ...prevState,
       [name]: value,
     }));
+
+    setError("");
   };
 
   const handleClose = () => {
     setIsShowLogin(false);
   };
 
+  const validateEmail = (email) => {
+    return email.includes("@") && email.includes(".");
+  };
+
   const handleLogin = () => {
-    dispatch(loginMiddlewareActions(values, navigate));
-    dispatch(getUserInfoAction(navigate));
-    setIsShowLogin(false);
-    navigate("/profile");
+    if (!values.email || !values.password) {
+      setError("Please fill in both fields."); 
+    } else if (!validateEmail(values.email)) {
+      setError("Please enter a valid email."); 
+    } else if (values.password.length < 6) {
+      setError("Password must be at least 6 characters long."); 
+    } else {
+      dispatch(loginMiddlewareActions(values, navigate));
+      dispatch(getUserInfoAction(navigate));
+      setIsShowLogin(false);
+      navigate("/profile");
+    }
   };
 
   const handleRegister = () => {
@@ -56,6 +72,7 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
       <div className="container">
         <div className="login__wrapper">
           <h2 className="login__title title">Login</h2>
+          
           <label className="login__label">
             Your email
             <input
@@ -82,6 +99,7 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
               onInput={handleChange}
             />
           </label>
+          {error && <p className="login__error">{error}</p>} {/* Вывод ошибки */}
           <div className="login__btns">
             <Button
               className="login__btn"

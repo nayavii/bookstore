@@ -10,6 +10,8 @@ import logo from "./images/logo.png";
 import logoWhite from "./images/logo_white.png";
 import heart from "./images/heart.png";
 import heartWhite from "./images/heart_white.png";
+import menuIcon from './images/menu__burger__icon.svg'
+import closeIcon from './images/close_icon.svg'
 import { ModeButton } from "../mode-btn";
 import { useDispatch, useSelector } from "react-redux";
 import { getBlackTheme, getCart, getFavoriteBooks } from "../../store/selectors";
@@ -17,8 +19,10 @@ import { Button } from "../button";
 import { Login } from "../login";
 import { LOGOUT_ACTION } from "../../store/actions/userActions";
 import { getUserInfoAction } from "../../store/middleware/authMiddleware";
+import { useState } from "react";
 
 export const Header = ({ setIsShowLogin }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isBlackTheme = useSelector(getBlackTheme);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -70,6 +74,10 @@ export const Header = ({ setIsShowLogin }) => {
     }
   };
 
+  const burgerMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className={`header ${isBlackTheme ? "header_black" : ""}`}>
       <div className="container">
@@ -77,6 +85,8 @@ export const Header = ({ setIsShowLogin }) => {
           <Link to="/" className="header__logo">
             <img src={isBlackTheme ? logoWhite : logo} alt="" />
           </Link>
+
+          <div className={`header__menu__wrapper ${isMenuOpen ? "open" : ""}`}>
 
           <nav className="header__menu">
             <ul className="header__list">
@@ -139,12 +149,14 @@ export const Header = ({ setIsShowLogin }) => {
               )}
             </div>
             <ModeButton />
+          </div>
             {isAuth ? (
               <>
                 <Button
                   title="Log out"
                   onClick={handleLogout}
                   isOutlineButton={true}
+                  className="header__logout"
                 />
               </>
             ) : (
@@ -153,6 +165,12 @@ export const Header = ({ setIsShowLogin }) => {
               </>
             )}
           </div>
+
+
+
+          <div className="header__burger" onClick={burgerMenu}>
+              <img src={isMenuOpen ? closeIcon : menuIcon} alt="Menu" />
+            </div>
         </div>
       </div>
     </header>

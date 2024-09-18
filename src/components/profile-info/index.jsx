@@ -1,14 +1,17 @@
 import { useSelector } from "react-redux";
 import "./index.scss";
-import { getUser } from "../../store/selectors";
+import { getBlackTheme, getUser } from "../../store/selectors";
 
 export const ProfileInfo = () => {
   const user = useSelector(getUser);
+  const isBlackTheme = useSelector(getBlackTheme);
+
   return (
-    <section className="profile-info">
+    <section className={`profile-info ${isBlackTheme ? 'profile-info_black' : ''}`}
+>
       <div className="container">
         <div className="profile-info__wrapper">
-        <h2 className="profile-info__title title">My profile</h2>
+          <h2 className="profile-info__title title">My profile</h2>
           <label className="profile-info__label">
             Id
             <input
