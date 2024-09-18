@@ -1,18 +1,18 @@
 import "./index.scss";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../button";
 import { useSelector } from "react-redux";
+import { Button } from "../button";
+import { getBlackTheme, getBooks } from "../../store/selectors";
+//swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { getBlackTheme, getBooks } from "../../store/selectors";
-import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Autoplay, Navigation, Scrollbar } from "swiper/modules";
 
 export const BestBooks = () => {
-  const isBlackTheme = useSelector(getBlackTheme)
+  const isBlackTheme = useSelector(getBlackTheme);
   const navigate = useNavigate();
   const books = useSelector(getBooks);
 
@@ -21,7 +21,7 @@ export const BestBooks = () => {
   };
 
   return (
-    <section className={`best-books ${isBlackTheme ? 'best-books_black' : ''}`}>
+    <section className={`best-books ${isBlackTheme ? "best-books_black" : ""}`}>
       <div className="container">
         <div className="best-books__header">
           <h2 className="best-books__title title">Best selling items</h2>
@@ -37,19 +37,19 @@ export const BestBooks = () => {
             scrollbar={{ draggable: true }}
             breakpoints={{
               320: {
-                slidesPerView: 1, // Отображает 1 слайд при ширине экрана 320px и выше
+                slidesPerView: 1,
               },
               640: {
-                slidesPerView: 1, // Отображает 2 слайда при ширине экрана 640px и выше
+                slidesPerView: 1,
               },
               768: {
-                slidesPerView: 2, // Отображает 1 слайд при ширине экрана 768px и выше
+                slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 3, // Отображает 3 слайда при ширине экрана 1024px и выше
+                slidesPerView: 3,
               },
               1280: {
-                slidesPerView: 4, // Отображает 4 слайда при ширине экрана 1280px и выше
+                slidesPerView: 4,
               },
             }}
           >
@@ -64,8 +64,12 @@ export const BestBooks = () => {
                       <div className="best-books__swiper__img">
                         <img src={book.image} alt="" />
                       </div>
-                      <Link to={`/new-books/${book?.isbn13}`} title={book?.title} className="best-books__swiper__title">
-                        {book?.title} 
+                      <Link
+                        to={`/new-books/${book?.isbn13}`}
+                        title={book?.title}
+                        className="best-books__swiper__title"
+                      >
+                        {book?.title}
                       </Link>
                       <p className="best-books__swiper__price">{book?.price}</p>
                     </div>

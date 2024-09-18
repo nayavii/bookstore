@@ -19,7 +19,6 @@ export const addBookByIdAction = (book) => ({
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
-
 export const addToCartAction = (book) => {
   return {
     type: ADD_TO_CART,
@@ -27,15 +26,10 @@ export const addToCartAction = (book) => {
   };
 };
 
-
 export const removeFromCartAction = (bookId) => ({
   type: REMOVE_FROM_CART,
   payload: bookId,
 });
-
-
-
-
 
 export const ADD_TO_FAVORITE = "ADD_TO_FAVORITE";
 export const REMOVE_FROM_FAVORITE = "REMOVE_FROM_FAVORITE";
@@ -46,7 +40,6 @@ export const addToFavoriteAction = (book) => {
     payload: book,
   };
 };
-
 
 export const removeFromFavoriteAction = (bookId) => ({
   type: REMOVE_FROM_FAVORITE,

@@ -1,8 +1,4 @@
 import {
-  addBookByIdAction,
-  addBooksAction
-} from "../store/actions/bookActions.js";
-import {
   addPostByIdAction,
   addPostsAction,
 } from "../store/actions/postActions.js";
@@ -23,19 +19,17 @@ export const fetchPosts = (dispatch) => {
     });
 };
 
-
-//посмотреть как правильно добавить посты по id
 export const fetchPostById = (dispatch, postId) => {
   fetch(`https://studapi.teachmeskills.by/blog/posts/${postId}`)
-      .then((response) => response.json())
-      .then((res) => {
-        console.log(posts, 'pooosts');
-        
-        const currentPost = posts.find((post) => post.id === +postId);
-        dispatch(addPostByIdAction(currentPost));
-      })
-      .catch((error) => {
-        console.log(error);
-        //dispatch(ERROR_POSTS_ACTION);
-      });
+    .then((response) => response.json())
+    .then((res) => {
+      console.log(posts, "pooosts");
+
+      const currentPost = posts.find((post) => post.id === +postId);
+      dispatch(addPostByIdAction(currentPost));
+    })
+    .catch((error) => {
+      console.log(error);
+      //dispatch(ERROR_POSTS_ACTION);
+    });
 };

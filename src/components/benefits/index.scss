@@ -5,7 +5,6 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-
     gap: 20px;
   }
 
@@ -31,7 +30,6 @@
 
   &_black {
     background-color: #131313;
-    //   #{$self}
 
     #{$self}__title,
     #{$self}__text {
@@ -49,7 +47,6 @@
     }
 
     &__item {
-
       width: 45%;
     }
 
@@ -68,9 +65,7 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .benefits {
-
     &__wrapper {
       margin: 0 auto;
       width: 60%;
@@ -79,7 +74,6 @@
     }
 
     &__item {
-
       width: fit-content;
     }
 
@@ -95,5 +89,4 @@
       line-height: 21px;
     }
   }
-
 }

@@ -1,5 +1,3 @@
-import { addUserDataAction } from "../store/actions/themeActions";
-
 const URL = "https://studapi.teachmeskills.by";
 
 export const fetchToken = (email, password) => {

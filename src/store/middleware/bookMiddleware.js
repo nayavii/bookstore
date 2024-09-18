@@ -1,4 +1,8 @@
-import { fetchBooksByQuery, fetchNewReleasesBookById, fetchNewReleasesBooks } from "../../api/book";
+import {
+  fetchBooksByQuery,
+  fetchNewReleasesBookById,
+  fetchNewReleasesBooks,
+} from "../../api/book";
 import { REQUEST_BOOKS_ACTION } from "../actions/bookActions";
 
 export const getNewReleasesBooksMiddleware = () => {

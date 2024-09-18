@@ -8,6 +8,7 @@ import { getBlackTheme } from "../../store/selectors";
 
 export const Benefits = () => {
   const isBlackTheme = useSelector(getBlackTheme);
+
   return (
     <section className={`benefits ${isBlackTheme ? "benefits_black" : ""}`}>
       <div className="container">

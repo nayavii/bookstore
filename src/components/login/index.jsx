@@ -1,14 +1,11 @@
 import "./index.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { getBlackTheme } from "../../store/selectors";
-
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../button";
-import { Register } from "../register";
-
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { getBlackTheme } from "../../store/selectors";
 import { loginMiddlewareActions } from "../../store/middleware/authMiddleware";
 import { getUserInfoAction } from "../../store/middleware/userMiddleware";
+import { Button } from "../button";
 
 export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
   const dispatch = useDispatch();
@@ -18,8 +15,6 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
     email: "",
     password: "",
   });
-
-  console.log(values);
 
   const [error, setError] = useState("");
 
@@ -49,11 +44,11 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
 
   const handleLogin = () => {
     if (!values.email || !values.password) {
-      setError("Please fill in both fields."); 
+      setError("Please fill in both fields.");
     } else if (!validateEmail(values.email)) {
-      setError("Please enter a valid email."); 
+      setError("Please enter a valid email.");
     } else if (values.password.length < 6) {
-      setError("Password must be at least 6 characters long."); 
+      setError("Password must be at least 6 characters long.");
     } else {
       dispatch(loginMiddlewareActions(values, navigate));
       dispatch(getUserInfoAction(navigate));
@@ -72,7 +67,6 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
       <div className="container">
         <div className="login__wrapper">
           <h2 className="login__title title">Login</h2>
-          
           <label className="login__label">
             Your email
             <input
@@ -86,7 +80,6 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
               ref={inputRefName}
             />
           </label>
-
           <label className="login__label">
             Your password
             <input
@@ -99,7 +92,7 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
               onInput={handleChange}
             />
           </label>
-          {error && <p className="login__error">{error}</p>} {/* Вывод ошибки */}
+          {error && <p className="login__error">{error}</p>}{" "}
           <div className="login__btns">
             <Button
               className="login__btn"
@@ -114,7 +107,6 @@ export const Login = ({ setIsShowRegister, setIsShowLogin }) => {
               onClick={handleLogin}
             />
           </div>
-
           <p className="login__text">
             No account? No problem. Click on
             <span onClick={handleRegister} className="login__link">

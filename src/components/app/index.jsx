@@ -1,12 +1,12 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { Header } from "../header";
 import { Body } from "../body";
-import { useEffect, useState } from "react";
+import { Footer } from "../footer/index.jsx";
 import { getNewReleasesBooksMiddleware } from "../../store/middleware/bookMiddleware.js";
 import { getPostsMiddleware } from "../../store/middleware/postMiddleware.js";
-import { useDispatch } from "react-redux";
 import { getUserInfoAction } from "../../store/middleware/userMiddleware.js";
-import { Footer } from "../footer/index.jsx";
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export const App = () => {
         setIsShowRegister={setIsShowRegister}
         isShowRegister={isShowRegister}
       />
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 };

@@ -1,16 +1,15 @@
 import "./index.scss";
-import { Post } from "../post";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { getBlackTheme, getPosts } from "../../store/selectors";
 import { getPostsMiddleware } from "../../store/middleware/postMiddleware";
+import { Post } from "../post";
 
 export const Posts = () => {
   const isBlackTheme = useSelector(getBlackTheme);
   const dispatch = useDispatch();
-  useEffect(() => {
-    // dispatch(changeTabAction(filter));
 
+  useEffect(() => {
     dispatch(getPostsMiddleware());
   }, []);
 

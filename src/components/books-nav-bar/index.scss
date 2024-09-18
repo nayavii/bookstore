@@ -1,5 +1,5 @@
 .navBar {
-  $self: &; 
+  $self: &;
   padding: 50px 0;
 
   &__wrapper {
@@ -7,6 +7,7 @@
     gap: 20px;
     align-items: center;
   }
+  
   &__search {
     width: 100%;
   }

@@ -1,11 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "./index.scss";
-import { Button } from "../button";
-import { reviewsData } from "./mock-data";
-import { Autoplay, Navigation } from "swiper/modules";
-import { renderStars } from "../../utils";
 import { useSelector } from "react-redux";
+import { reviewsData } from "./mock-data";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 import { getBlackTheme } from "../../store/selectors";
+import { renderStars } from "../../utils";
 
 export const Reviews = () => {
   const isBlackTheme = useSelector(getBlackTheme);

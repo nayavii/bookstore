@@ -3,7 +3,6 @@ import {
   ADD_TO_CART,
   ADD_TO_FAVORITE,
   DELETE_BOOK,
-  DELETE_FROM_CART,
   RECEIVED_BOOKS,
   REMOVE_FROM_CART,
   REMOVE_FROM_FAVORITE,
@@ -56,15 +55,41 @@ const booksReducer = (state = initialState, action) => {
         book: null,
       };
 
-      case ADD_TO_CART: {
-        const existingBookIndex = state.cart.findIndex(
-          (book) => book.isbn13 === action.payload.isbn13
+    case ADD_TO_CART: {
+      const existingBookIndex = state.cart.findIndex(
+        (book) => book.isbn13 === action.payload.isbn13
+      );
+
+      if (existingBookIndex >= 0) {
+        const updatedCart = state.cart.map((book, index) =>
+          index === existingBookIndex
+            ? { ...book, quantity: book.quantity + 1 }
+            : book
         );
-  
-        if (existingBookIndex >= 0) {
+        return {
+          ...state,
+          cart: updatedCart,
+        };
+      } else {
+        return {
+          ...state,
+          cart: [...state.cart, { ...action.payload, quantity: 1 }],
+        };
+      }
+    }
+
+    case REMOVE_FROM_CART: {
+      const existingBookIndex = state.cart.findIndex(
+        (book) => book.isbn13 === action.payload
+      );
+
+      if (existingBookIndex >= 0) {
+        const existingBook = state.cart[existingBookIndex];
+
+        if (existingBook.quantity > 1) {
           const updatedCart = state.cart.map((book, index) =>
             index === existingBookIndex
-              ? { ...book, quantity: book.quantity + 1 }
+              ? { ...book, quantity: book.quantity - 1 }
               : book
           );
           return {
@@ -74,65 +99,40 @@ const booksReducer = (state = initialState, action) => {
         } else {
           return {
             ...state,
-            cart: [...state.cart, { ...action.payload, quantity: 1 }],
+            cart: state.cart.filter((book) => book.isbn13 !== action.payload),
           };
         }
       }
-  
-      case REMOVE_FROM_CART: {
-        const existingBookIndex = state.cart.findIndex(
-          (book) => book.isbn13 === action.payload
-        );
-  
-        if (existingBookIndex >= 0) {
-          const existingBook = state.cart[existingBookIndex];
-  
-          if (existingBook.quantity > 1) {
-            const updatedCart = state.cart.map((book, index) =>
-              index === existingBookIndex
-                ? { ...book, quantity: book.quantity - 1 }
-                : book
-            );
-            return {
-              ...state,
-              cart: updatedCart,
-            };
-          } else {
-            return {
-              ...state,
-              cart: state.cart.filter((book) => book.isbn13 !== action.payload),
-            };
-          }
-        }
-        return state;
-      }
+      return state;
+    }
 
+    case ADD_TO_FAVORITE: {
+      const isBookInFavorite = state.favorite.some(
+        (book) => book.isbn13 === action.payload.isbn13
+      );
 
-      case ADD_TO_FAVORITE: {
-        const isBookInFavorite = state.favorite.some(
-          (book) => book.isbn13 === action.payload.isbn13
-        );
-      
-        if (isBookInFavorite) {
-          return {
-            ...state,
-            favorite: state.favorite.filter(
-              (book) => book.isbn13 !== action.payload.isbn13
-            ),
-          };
-        } else {
-          return {
-            ...state,
-            favorite: [...state.favorite, action.payload],
-          };
-        }
-      }
-
-      case REMOVE_FROM_FAVORITE:
+      if (isBookInFavorite) {
         return {
           ...state,
-          favorite: state.favorite.filter((book) => book.isbn13 !== action.payload),
+          favorite: state.favorite.filter(
+            (book) => book.isbn13 !== action.payload.isbn13
+          ),
         };
+      } else {
+        return {
+          ...state,
+          favorite: [...state.favorite, action.payload],
+        };
+      }
+    }
+
+    case REMOVE_FROM_FAVORITE:
+      return {
+        ...state,
+        favorite: state.favorite.filter(
+          (book) => book.isbn13 !== action.payload
+        ),
+      };
 
     default:
       return state;

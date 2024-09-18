@@ -1,11 +1,10 @@
 import "./index.scss";
-import { getBlackTheme } from "../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getBlackTheme } from "../../store/selectors";
 import { Button } from "../button";
 import {
   addToCartAction,
-  DELETE_FROM_CART_ACTION,
   removeFromCartAction,
 } from "../../store/actions/bookActions";
 
@@ -29,7 +28,7 @@ export const CartBook = ({ book }) => {
     }
   };
 
-  const totalPrice = parseFloat(book.price.replace('$', '')) * book.quantity;
+  const totalPrice = parseFloat(book.price.replace("$", "")) * book.quantity;
 
   return (
     <div className={`cart-book  ${isBlackTheme ? "cart-book_black" : ""}`}>

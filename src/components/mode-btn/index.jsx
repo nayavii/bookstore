@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-
+import "./index.scss";
 import sun from "./images/sun.svg";
 import moon from "./images/moon.svg";
-import "./index.scss";
+import { useDispatch, useSelector } from "react-redux";
 import { getBlackTheme } from "../../store/selectors";
 import { CHANGE_THEME_ACTION } from "../../store/actions/themeActions";
 
@@ -14,7 +13,6 @@ export const ModeButton = () => {
     dispatch(CHANGE_THEME_ACTION);
   };
 
-  // const {isBlackTheme} = useContext(MyContext);
   return (
     <div className="mode-btn" onClick={handleChangeTheme}>
       <img src={isBlackTheme ? sun : moon} alt="" />

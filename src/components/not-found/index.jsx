@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
 import "./index.scss";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../button";
 
 export const NotFound = () => {

@@ -1,5 +1,5 @@
 .register {
-  $self: &; 
+  $self: &;
   position: fixed;
   inset: 0;
   background-color: #8aaae65b;
@@ -8,17 +8,16 @@
   align-items: center;
   z-index: 15;
 
-
   &__wrapper {
     width: 500px;
     background-color: #fdfdfd;
     padding: 50px 40px;
     border-radius: 30px;
   }
+
   &__title {
     margin-bottom: 30px;
   }
-
 
   &__input {
     width: 100%;
@@ -37,9 +36,6 @@
     width: 100%;
   }
 
-
-  &__text {
-  }
   &__link {
     margin-left: 5px;
     color: #8aaae6;
@@ -53,12 +49,10 @@
       background-color: #131313;
     }
 
-    #{$self}__title, #{$self}__label, #{$self}__text{
+    #{$self}__title,
+    #{$self}__label,
+    #{$self}__text {
       color: #ffffff;
-    }
-
-    #{$self}__btn {
-
     }
   }
 }

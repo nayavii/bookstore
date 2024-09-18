@@ -10,6 +10,6 @@ const rootReducer = combineReducers({
   postsReducer,
   userReducer,
 });
-const store = configureStore({reducer: rootReducer,});
+const store = configureStore({ reducer: rootReducer });
 
 export default store;

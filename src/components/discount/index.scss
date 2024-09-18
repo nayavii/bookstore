@@ -28,7 +28,7 @@
     background-color: #ffffff;
     color: #8aaae6;
     margin-right: 20px;
-    transition: all 0.5s linear ;
+    transition: all 0.5s linear;
 
     &:hover {
       background-color: #4669a9;
@@ -37,52 +37,37 @@
   }
 
   &_black {
-    background: #292929 url(./images/bg_black.jpg) no-repeat center center / cover;
-  //   #{$self}
+    background: #292929 url(./images/bg_black.jpg) no-repeat center center /
+      cover;
   }
-
 }
 
 @media screen and (max-width: 992px) {
-
   .discount {
     padding: 100px 0 80px;
-  
 
-  
     &__img {
       width: 600px;
-  
     }
-  
+
     &__title {
       font-size: 40px;
       line-height: 50px;
     }
-  
-  
   }
-
 }
 
 @media screen and (max-width: 768px) {
-
   .discount {
     padding: 80px 0 60px;
-  
 
-  
     &__img {
       width: 400px;
-  
     }
-  
+
     &__title {
       font-size: 25px;
       line-height: 30px;
     }
-  
-  
   }
-
 }

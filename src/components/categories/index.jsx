@@ -1,16 +1,16 @@
 import "./index.scss";
-import { Link } from "react-router-dom";
 import cover_1 from "./images/romance.jpg";
 import cover_2 from "./images/lifestyle.jpg";
 import cover_3 from "./images/recipe.jpg";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getBlackTheme } from "../../store/selectors";
 
 export const Categories = () => {
-  const isBlackTheme = useSelector(getBlackTheme)
+  const isBlackTheme = useSelector(getBlackTheme);
 
   return (
-    <div className={`categories ${isBlackTheme ? 'categories_black' : ''}`}>
+    <div className={`categories ${isBlackTheme ? "categories_black" : ""}`}>
       <div className="container">
         <h2 className="categories__title title">Categories</h2>
         <div className="categories__wrapper">

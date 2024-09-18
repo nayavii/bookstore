@@ -4,7 +4,6 @@ import { HomePage } from "../../pages/home-page";
 import { NewReleasePage } from "../../pages/new-release-page";
 import { BookInfoPage } from "../../pages/book-info-page";
 import { BlogPage } from "../../pages/blog-page";
-
 import { Login } from "../login";
 import { Register } from "../register";
 import { ActivationEmailPage } from "../../pages/activation-email";
@@ -49,23 +48,15 @@ export const Body = ({
         <Route path="/favorite" element={<FavoritePage />} />
 
         <Route path="*" element={<NotFound />} />
-        {/* 
-
-
-
-
-
-
-
-
-{/* <Route path="my-profile" element={<UserProfile />} /> */}
       </Routes>
+
       {isShowLogin && (
         <Login
           setIsShowRegister={setIsShowRegister}
           setIsShowLogin={setIsShowLogin}
         />
       )}
+      
       {isShowRegister && (
         <Register
           setIsShowRegister={setIsShowRegister}

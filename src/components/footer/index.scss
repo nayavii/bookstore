@@ -109,7 +109,6 @@
 
   &_black {
     background-color: #090808;
-    //   #{$self}
   }
 }
 
@@ -139,11 +138,8 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .footer {
-
-
     &__info,
     &__links,
     &__payment,
@@ -155,7 +151,7 @@
       margin: 5px 0 20px;
     }
 
-    &__shipping{
+    &__shipping {
       margin: 40px 0 0;
     }
   }

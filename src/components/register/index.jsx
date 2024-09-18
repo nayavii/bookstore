@@ -1,14 +1,12 @@
 import "./index.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { getBlackTheme, getUser } from "../../store/selectors";
-
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../button";
+import { useDispatch, useSelector } from "react-redux";
+import { getBlackTheme } from "../../store/selectors";
 import { registerMiddlewareActions } from "../../store/middleware/authMiddleware";
+import { Button } from "../button";
 
 export const Register = ({ setIsShowRegister, setIsShowLogin }) => {
   const dispatch = useDispatch();
-  const user = useSelector(getUser);
   const isBlackTheme = useSelector(getBlackTheme);
   const [values, setValues] = useState({
     name: "",
@@ -16,10 +14,6 @@ export const Register = ({ setIsShowRegister, setIsShowLogin }) => {
     password: "",
     course_group: "",
   });
-
-  console.log(values);
-
-  const [errors, setErrors] = useState({});
 
   const inputRefName = useRef(null); // {current: null}
 

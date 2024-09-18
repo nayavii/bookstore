@@ -1,6 +1,7 @@
 .book-info {
   $self: &;
   padding: 80px 0;
+  
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -26,9 +27,6 @@
     img {
       width: 100%;
     }
-  }
-
-  &__info {
   }
 
   &__title {
@@ -64,7 +62,6 @@
 
 @media screen and (max-width: 992px) {
   .book-info {
-
     padding: 60px 0;
 
     &__wrapper {
@@ -72,7 +69,6 @@
       justify-content: center;
       margin-top: 40px;
     }
-
 
     &__btn {
       width: 100%;
@@ -83,6 +79,5 @@
         margin: 0;
       }
     }
-
   }
 }

@@ -1,6 +1,5 @@
-// Pagination.jsx
+import "./index.scss";
 import React from "react";
-import "./index.scss"; // Стили для пагинации
 import { Button } from "../button";
 
 export const Pagination = ({ currentPage, totalPages, onPageChange }) => {
@@ -24,9 +23,7 @@ export const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     <div className="pagination">
       <Button
         title="Previous"
-        className={`pagination__button ${
-          currentPage === 1 ? "disabled" : ""
-        }`}
+        className={`pagination__button ${currentPage === 1 ? "disabled" : ""}`}
         onClick={handlePrevious}
         disabled={currentPage === 1}
       />

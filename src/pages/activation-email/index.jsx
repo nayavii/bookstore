@@ -1,15 +1,12 @@
-import { useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import { activationEmailMiddlewareActions } from "../../store/middleware/authMiddleware";
 
 export const ActivationEmailPage = ({ setIsShowLogin }) => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { uid, token } = useParams();
-
-  console.log(uid, token);
 
   const handleLogin = () => {
     setIsShowLogin(true);

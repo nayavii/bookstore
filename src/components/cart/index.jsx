@@ -1,5 +1,5 @@
 import "./index.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { getBlackTheme, getCart } from "../../store/selectors";
 import { CartBook } from "../book-cart";
 import { Button } from "../button";
@@ -10,7 +10,6 @@ export const Cart = () => {
   const isBlackTheme = useSelector(getBlackTheme);
 
   const books = useSelector(getCart);
-
 
   const handleClick = () => {
     navigate("/new-books");

@@ -1,15 +1,14 @@
 import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import { getBlackTheme, getBooks } from "../../store/selectors";
 import { Book } from "../book";
 import {
   getBooksByQueryMiddleware,
   getNewReleasesBooksMiddleware,
 } from "../../store/middleware/bookMiddleware.js";
-import { useEffect, useState } from "react";
 import { BooksNavBar } from "../books-nav-bar/index.jsx";
 import { Pagination } from "../pagination/index.jsx";
-
 
 export const Books = ({ setIsShowLogin }) => {
   const isBlackTheme = useSelector(getBlackTheme);
@@ -17,22 +16,16 @@ export const Books = ({ setIsShowLogin }) => {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(getNewReleasesBooksMiddleware());
-  // }, []);
+  const booksPerPage = 9;
 
-  const booksPerPage = 9; // Количество книг на странице
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const [currentPage, setCurrentPage] = useState(1); // Текущая страница
-
-  // Рассчитываем индекс первой и последней книги для текущей страницы
   const indexOfLastBook = currentPage * booksPerPage;
   const indexOfFirstBook = indexOfLastBook - booksPerPage;
 
-  // Книги, которые отображаются на текущей странице
   const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
 
-  const totalPages = Math.ceil(books.length / booksPerPage); // Общее количество страниц
+  const totalPages = Math.ceil(books.length / booksPerPage);
 
   const handleSearch = (searchValue) => {
     if (searchValue) {
@@ -43,7 +36,7 @@ export const Books = ({ setIsShowLogin }) => {
   };
 
   const handlePageChange = (page) => {
-    setCurrentPage(page); // Изменение текущей страницы
+    setCurrentPage(page);
   };
 
   return (

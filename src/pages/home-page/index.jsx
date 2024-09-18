@@ -1,4 +1,3 @@
-
 import { Banner } from "../../components/banner";
 import { Benefits } from "../../components/benefits";
 import { BestBooks } from "../../components/best-books";
@@ -12,11 +11,11 @@ export const HomePage = () => {
     <>
       <Banner />
       <Benefits />
-      <BestBooks/>
-      <Discount/>
-      <Categories/>
-      <Reviews/>
-      <BestPosts/>
+      <BestBooks />
+      <Discount />
+      <Categories />
+      <Reviews />
+      <BestPosts />
     </>
   );
 };

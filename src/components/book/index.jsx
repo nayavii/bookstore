@@ -1,20 +1,17 @@
 import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { getBlackTheme, getBook, getFavoriteBooks } from "../../store/selectors";
 import { Link } from "react-router-dom";
-import { Button } from "../button";
+import { getBlackTheme, getFavoriteBooks } from "../../store/selectors";
 import {
   addToCartAction,
   addToFavoriteAction,
-  removeFromFavoriteAction,
 } from "../../store/actions/bookActions";
+import { Button } from "../button";
 
 export const Book = ({ book, setIsShowLogin }) => {
   const dispatch = useDispatch();
   const isBlackTheme = useSelector(getBlackTheme);
   const isAuth = JSON.parse(localStorage.getItem("isAuth"));
-  console.log(book);
-
 
   const favoriteBooks = useSelector(getFavoriteBooks);
 

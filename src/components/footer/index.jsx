@@ -73,27 +73,35 @@ export const Footer = () => {
             </div>
           </div>
           <div className="footer__payment">
-          <div className="footer__pay">
-              <h2 className="footer__title footer__pay__title">Payment options:</h2>
+            <div className="footer__pay">
+              <h2 className="footer__title footer__pay__title">
+                Payment options:
+              </h2>
               <img src={visa} alt="Visa" className="footer__pay__img" />
-              <img src={mastercard} alt="Mastercard" className="footer__pay__img" />
+              <img
+                src={mastercard}
+                alt="Mastercard"
+                className="footer__pay__img"
+              />
               <img src={paypal} alt="Paypal" className="footer__pay__img" />
-  
             </div>
             <div className="footer__shipping">
-              <h2 className="footer__title footer__shipping__title">We ship with:</h2>
+              <h2 className="footer__title footer__shipping__title">
+                We ship with:
+              </h2>
               <img src={dhl} alt="DHL" className="footer__shipping__img" />
               <img src={ups} alt="UPS" className="footer__shipping__img" />
             </div>
-
           </div>
           <div className="footer__contact">
             <h2 className="footer__title">Contact Us</h2>
             <p className="footer__text">
-              Do you have any queries or suggestions? <span>yourinfo@gmail.com</span>
+              Do you have any queries or suggestions?{" "}
+              <span>yourinfo@gmail.com</span>
             </p>
             <p className="footer__text">
-              If you need support? Just give us a call. <span>+34 111 222 333</span>
+              If you need support? Just give us a call.{" "}
+              <span>+34 111 222 333</span>
             </p>
           </div>
         </div>

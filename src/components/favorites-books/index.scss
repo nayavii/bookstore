@@ -29,19 +29,17 @@
     background-color: #131313;
 
     #{$self}__title,
-    #{$self}__text, #{$self}__empty__text {
+    #{$self}__text,
+    #{$self}__empty__text {
       color: #ffffff;
     }
   }
 }
 
 @media screen and (max-width: 1200px) {
-
   .fav-books {
-  
     &__wrapper {
       gap: 30px;
     }
   }
-
 }

@@ -1,9 +1,9 @@
 import "./index.scss";
+import image from "./images/image_1.jpg";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getBlackTheme } from "../../store/selectors";
 import { Button } from "../button";
-import { useNavigate } from "react-router-dom";
-import image from "./images/image_1.jpg";
 
 export const About = () => {
   const isBlackTheme = useSelector(getBlackTheme);
@@ -14,8 +14,8 @@ export const About = () => {
   };
 
   const handleClick = () => {
-    navigate('/new-books');
-  }
+    navigate("/new-books");
+  };
 
   return (
     <section className={`about ${isBlackTheme ? "about_black" : ""}`}>
@@ -31,10 +31,10 @@ export const About = () => {
           <div className="about__info">
             <h3 className="about__info__title">Best Bookstore of all time</h3>
             <p className="about__info__text">
-              Welcome to Bookstore, where a passion for books meets
-              a love for community. We offer a diverse collection of
-              bestsellers, timeless classics, and hidden gems across all genres,
-              carefully selected to inspire and entertain readers of all tastes.
+              Welcome to Bookstore, where a passion for books meets a love for
+              community. We offer a diverse collection of bestsellers, timeless
+              classics, and hidden gems across all genres, carefully selected to
+              inspire and entertain readers of all tastes.
             </p>
             <p className="about__info__text">
               Our bookstore is more than just a place to buy books—it's a space
@@ -44,11 +44,15 @@ export const About = () => {
             </p>
             <p className="about__info__text">
               Whether you're searching for your next great read or simply want
-              to explore new ideas, Bookstore is here to guide you
-              on your literary journey. Join us and discover a world of stories
-              waiting to be told.
+              to explore new ideas, Bookstore is here to guide you on your
+              literary journey. Join us and discover a world of stories waiting
+              to be told.
             </p>
-            <Button title='Go to Shop' onClick={handleClick} className="about__btn"/>
+            <Button
+              title="Go to Shop"
+              onClick={handleClick}
+              className="about__btn"
+            />
           </div>
         </div>
       </div>

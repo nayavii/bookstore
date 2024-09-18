@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
 import "./index.scss";
+import { useSelector } from "react-redux";
 import { getBlackTheme } from "../../store/selectors";
 
 export const Button = ({ title, isOutlineButton, className = "", onClick }) => {

@@ -93,22 +93,14 @@ a {
   }
 }
 
-// .input-error {
-// 	margin-bottom: 20px;
-// 	color: rgba(253, 4, 4, 0.883);
-// 	text-align: center;
-// }
-
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 992px;
     padding: 0 15px;
   }
-
 }
 
 @media screen and (max-width: 992px) {
-
   body {
     font-size: 16px;
     line-height: 18px;
@@ -121,8 +113,6 @@ a {
     font-size: 32px;
     line-height: 35px;
   }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -134,16 +124,11 @@ a {
     padding: 0 15px;
     overflow-y: hidden;
   }
-
-  
 }
 
 @media screen and (max-width: 576px) {
   .container {
     max-width: 100%;
-    padding: 0 15px; 
+    padding: 0 15px;
   }
-
-  
-
 }

@@ -1,13 +1,10 @@
 import "./index.scss";
 import { useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import {
-  getPostsByIdMiddleware
-} from "../../store/middleware/postMiddleware";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "../button";
-import CustomizedTable from "../info-table";
+import { getPostsByIdMiddleware } from "../../store/middleware/postMiddleware";
 import { getBlackTheme, getPost } from "../../store/selectors";
+import { Button } from "../button";
 
 export const PostInfo = () => {
   const isBlackTheme = useSelector(getBlackTheme);

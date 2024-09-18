@@ -1,11 +1,8 @@
 import "./index.scss";
 import { useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import {
-  getNewReleasesBookById,
-  getNewReleasesBookByIdMiddleware,
-} from "../../store/middleware/bookMiddleware";
 import { useDispatch, useSelector } from "react-redux";
+import { getNewReleasesBookByIdMiddleware } from "../../store/middleware/bookMiddleware";
 import { Button } from "../button";
 import CustomizedTable from "../info-table";
 import {
@@ -24,7 +21,6 @@ export const BookInfo = ({ setIsShowLogin }) => {
   const navigate = useNavigate();
   const { bookId } = useParams();
   const isAuth = JSON.parse(localStorage.getItem("isAuth"));
-  console.log(bookId);
   const book = useSelector(getBook);
 
   const favoriteBooks = useSelector(getFavoriteBooks);

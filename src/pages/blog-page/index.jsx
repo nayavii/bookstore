@@ -1,7 +1,6 @@
-import { Discount } from "../../components/discount";
+import banner from "./images/banner.jpg";
 import { PageBanner } from "../../components/page-banner";
 import { Posts } from "../../components/posts";
-import banner from './images/banner.jpg'
 
 export const BlogPage = () => {
   return (

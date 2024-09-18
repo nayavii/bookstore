@@ -1,17 +1,10 @@
 import "./index.scss";
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../button";
-import { useDispatch, useSelector } from "react-redux";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { getBlackTheme, getPosts } from "../../store/selectors";
-import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
-import { getPostsMiddleware } from "../../store/middleware/postMiddleware";
 import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getPostsMiddleware } from "../../store/middleware/postMiddleware";
+import { getBlackTheme, getPosts } from "../../store/selectors";
+import { Button } from "../button";
 
 export const BestPosts = () => {
   const isBlackTheme = useSelector(getBlackTheme);

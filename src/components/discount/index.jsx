@@ -1,8 +1,8 @@
 import "./index.scss";
 import books from "./images/books.png";
-import { Button } from "../button";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Button } from "../button";
 import { getBlackTheme } from "../../store/selectors";
 import { CountDown } from "../timer";
 
@@ -15,7 +15,7 @@ export const Discount = () => {
   };
 
   return (
-    <section className={`discount ${isBlackTheme ? 'discount_black' : ''}`}>
+    <section className={`discount ${isBlackTheme ? "discount_black" : ""}`}>
       <div className="container">
         <div className="discount__wrapper">
           <div className="discount__img">
