@@ -3,7 +3,7 @@ import {
   DELETE_POST,
   RECEIVED_POSTS,
   REQUEST_POSTS,
-} from "../actions/postActions.js";
+} from "../actions/postActions";
 
 const initialState = {
   posts: {

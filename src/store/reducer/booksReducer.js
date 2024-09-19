@@ -7,7 +7,7 @@ import {
   REMOVE_FROM_CART,
   REMOVE_FROM_FAVORITE,
   REQUEST_BOOKS,
-} from "../actions/bookActions.js";
+} from "../actions/bookActions";
 
 const initialState = {
   books: {

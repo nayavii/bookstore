@@ -3,7 +3,7 @@ import {
   POST_USER_DATA,
   RECEIVED_TOKEN,
   RECEIVED_USER_DATA,
-} from "../actions/userActions.js";
+} from "../actions/userActions";
 
 const initialState = {
   user: {
