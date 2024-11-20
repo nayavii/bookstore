@@ -31,7 +31,7 @@ export const App:FC = () => {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header setIsShowLogin={handleChangeShowLogin} />
       <Body
         setIsShowLogin={handleChangeShowLogin}
