@@ -1,3 +1,5 @@
+import { Post } from '../../typings/post';
+
 export const REQUEST_POSTS = "REQUEST_POSTS";
 export const RECEIVED_POSTS = "RECEIVED_POSTS";
 

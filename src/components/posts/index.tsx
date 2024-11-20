@@ -5,12 +5,13 @@ import { getBlackTheme, getPosts } from "../../store/selectors";
 import { getPostsMiddleware } from "../../store/middleware/postMiddleware";
 import { Post } from "../post";
 import { AppDispatch } from "../../store";
+import { Post as IPost } from '../../typings/post';
 
 
 export const Posts:FC = () => {
   const isBlackTheme = useSelector(getBlackTheme);
   const dispatch = useDispatch<AppDispatch>();
-  const posts = useSelector(getPosts) as Post[];
+  const posts = useSelector(getPosts) as IPost[];
 
   useEffect(() => {
     dispatch(getPostsMiddleware());

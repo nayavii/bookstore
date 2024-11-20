@@ -1,3 +1,5 @@
+import { Book } from '../../typings/book';
+
 export const REQUEST_BOOKS = "REQUEST_BOOKS";
 export const RECEIVED_BOOKS = "RECEIVED_BOOKS";
 
@@ -5,6 +7,7 @@ export const ADD_BOOK = "ADD_BOOK";
 export const DELETE_BOOK = "DELETE_BOOK";
 
 export const REQUEST_BOOKS_ACTION = { type: REQUEST_BOOKS };
+
 
 export const addBooksAction = (books: Book[]) => ({
   type: RECEIVED_BOOKS,

@@ -1,3 +1,5 @@
+import { IUser } from '../../typings/user';
+
 export const POST_USER_DATA = "POST_USER_DATA";
 export const RECEIVED_USER_DATA = "RECEIVED_USER_DATA";
 export const RECEIVED_TOKEN = "RECEIVED_TOKEN";
@@ -5,6 +7,7 @@ export const LOGOUT = "LOGOUT";
 
 export const POST_USER_DATA_ACTION = { type: POST_USER_DATA };
 export const LOGOUT_ACTION = { type: LOGOUT };
+
 
 export const addUserDataAction = (user: IUser ) => ({
   type: RECEIVED_USER_DATA,

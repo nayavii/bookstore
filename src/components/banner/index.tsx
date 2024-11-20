@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getBlackTheme, getBooks } from "../../store/selectors";
 import { Button } from "../button";
+import { Book } from '../../typings/book';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

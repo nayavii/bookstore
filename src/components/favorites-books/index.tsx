@@ -8,6 +8,7 @@ import {
 } from "../../store/selectors";
 import { Book } from "../book";
 import { Button } from "../button";
+import { Book as IBook } from '../../typings/book';
 
 
 interface IFavoriteBooksProps {
@@ -17,7 +18,7 @@ interface IFavoriteBooksProps {
 export const FavoriteBooks:FC<IFavoriteBooksProps> = ({ setIsShowLogin }) => {
   const navigate = useNavigate();
   const isBlackTheme = useSelector(getBlackTheme);
-  const favoriteBooks = useSelector(getFavoriteBooks) as Book[];
+  const favoriteBooks = useSelector(getFavoriteBooks) as IBook[];
 
   const handleClick = () => {
     navigate("/new-books");

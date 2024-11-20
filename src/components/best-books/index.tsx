@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Autoplay, Navigation, Scrollbar } from "swiper/modules";
-
+import { Book } from '../../typings/book';
 
 export const BestBooks:FC = () => {
   const isBlackTheme = useSelector(getBlackTheme);

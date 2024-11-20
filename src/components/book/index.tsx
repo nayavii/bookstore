@@ -9,9 +9,10 @@ import {
 import { Button } from "../button";
 import { AppDispatch } from "../../store";
 import { FC } from "react";
+import { Book as IBook } from '../../typings/book';
 
 interface BookProps {
-  book: Book;
+  book: IBook;
   setIsShowLogin: (value: boolean) => void;
 }
 
@@ -20,7 +21,7 @@ export const Book:FC<BookProps> = ({ book, setIsShowLogin }) => {
   const isBlackTheme = useSelector(getBlackTheme);
   const isAuth = JSON.parse(localStorage.getItem("isAuth") || "false");
 
-  const favoriteBooks = useSelector(getFavoriteBooks) as Book[];
+  const favoriteBooks = useSelector(getFavoriteBooks) as IBook[];
 
   const isFavorite = favoriteBooks.some(
     (favoriteBook) => favoriteBook.isbn13 === book.isbn13

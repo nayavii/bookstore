@@ -8,6 +8,7 @@ import {
   removeFromCartAction,
 } from "../../store/actions/bookActions";
 import { FC } from "react";
+import { Book } from '../../typings/book';
 
 interface CartBookProps {
   book: Book;

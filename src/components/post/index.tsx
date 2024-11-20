@@ -3,9 +3,10 @@ import { FC } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getBlackTheme } from "../../store/selectors";
+import { Post as IIPost} from '../../typings/post'
 
 interface IPost {
-  post: Post
+  post: IIPost
 }
 
 export const Post:FC<IPost> = ({ post }) => {

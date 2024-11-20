@@ -1,3 +1,5 @@
+import { Post } from '../../typings/post';
+
 export const posts: Post[] = [
   {
     "id": 1,

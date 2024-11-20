@@ -10,6 +10,7 @@ import { BooksNavBar } from "../books-nav-bar";
 import { Pagination } from "../pagination";
 import { Book } from "../book";
 import { AppDispatch } from "../../store";
+import { Book as IBook } from '../../typings/book';
 
 interface BooksProps {
   setIsShowLogin: (value: boolean) => void;
@@ -17,7 +18,7 @@ interface BooksProps {
 
 export const Books:FC<BooksProps> = ({ setIsShowLogin }) => {
   const isBlackTheme = useSelector(getBlackTheme);
-  const books = useSelector(getBooks) as Book[];
+  const books = useSelector(getBooks) as IBook[];
 
   const dispatch = useDispatch<AppDispatch>();
 

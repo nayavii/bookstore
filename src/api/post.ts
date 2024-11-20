@@ -4,6 +4,7 @@ import {
 } from "../store/actions/postActions";
 import { posts } from "../components/posts/mock-data";
 import { AppDispatch } from "../store/index.js";
+import { Post } from '../typings/post';
 
 const URL = "https://api.itbook.store/1.0";
 

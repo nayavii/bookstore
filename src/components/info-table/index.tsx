@@ -10,6 +10,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { getBlackTheme, getBook } from "../../store/selectors";
 import { renderStars } from "../../utils";
+import { Book } from '../../typings/book';
 
 const StyledTableCell = styled(TableCell)(() => ({
   [`&.${tableCellClasses.body}`]: {

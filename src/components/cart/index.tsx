@@ -5,6 +5,7 @@ import { getBlackTheme, getCart } from "../../store/selectors";
 import { CartBook } from "../book-cart";
 import { Button } from "../button";
 import { FC } from "react";
+import { Book } from '../../typings/book';
 
 export const Cart:FC = () => {
   const navigate = useNavigate();

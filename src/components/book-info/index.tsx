@@ -15,6 +15,7 @@ import {
   addToFavoriteAction,
 } from "../../store/actions/bookActions";
 import { AppDispatch } from "../../store";
+import { Book } from '../../typings/book';
 
 interface BookInfoProps {
   setIsShowLogin: (value: boolean) => void;

@@ -1,4 +1,4 @@
-interface Book {
+export interface Book {
   title: string;
   image: string;
   isbn13: string;
@@ -13,3 +13,5 @@ interface Book {
   pages: number;
   rating: number;
 }
+
+

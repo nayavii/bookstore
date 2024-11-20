@@ -6,6 +6,7 @@ import { getPostsMiddleware } from "../../store/middleware/postMiddleware";
 import { getBlackTheme, getPosts } from "../../store/selectors";
 import { Button } from "../button";
 import { AppDispatch } from "../../store";
+import { Post } from '../../typings/post';
 
 export const BestPosts:FC = () => {
   const isBlackTheme = useSelector(getBlackTheme);
