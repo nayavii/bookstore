@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/bookstore/static/css/main.c0f7d4f6.css",
+    "main.js": "/bookstore/static/js/main.9357b132.js",
+    "static/media/banner.jpg": "/bookstore/static/media/banner.e610eabe3dd040f61e67.jpg",
+    "static/media/image_1.jpg": "/bookstore/static/media/image_1.758ab1501713034ad33d.jpg",
+    "static/media/404.jpg": "/bookstore/static/media/404.1c9957cec228d2e98c44.jpg",
+    "static/media/books.png": "/bookstore/static/media/books.1625d492a05e290889af.png",
+    "static/media/bg.jpg": "/bookstore/static/media/bg.8e7dd37b01920236904a.jpg",
+    "static/media/bg_black.jpg": "/bookstore/static/media/bg_black.636d89609b98f2e679df.jpg",
+    "static/media/recipe.jpg": "/bookstore/static/media/recipe.48c6a2f43d94654fde40.jpg",
+    "static/media/romance.jpg": "/bookstore/static/media/romance.dfb12f1972a2ac7deb69.jpg",
+    "static/media/lifestyle.jpg": "/bookstore/static/media/lifestyle.947a755b84c3c351fc28.jpg",
+    "static/media/sun.svg": "/bookstore/static/media/sun.62bdaaba385a2cf01d4f12f10559e89c.svg",
+    "static/media/person_icon.svg": "/bookstore/static/media/person_icon.54ecd6946181c061f1b54267c899e2d0.svg",
+    "static/media/person_icon_white.svg": "/bookstore/static/media/person_icon_white.47089307c55af89adceea1e04650e9ce.svg",
+    "index.html": "/bookstore/index.html",
+    "static/media/moon.svg": "/bookstore/static/media/moon.5fb173c920edf3c7b52c0af27d784c86.svg",
+    "static/media/bag.svg": "/bookstore/static/media/bag.395bbbacf013f9e730617eb34f0effc8.svg",
+    "static/media/bag_white.svg": "/bookstore/static/media/bag_white.607f0d66d5655c17751d56125f288893.svg",
+    "static/media/close_icon.svg": "/bookstore/static/media/close_icon.6aa3238b2436fedc9beda0af53e0e383.svg",
+    "static/media/search_icon.svg": "/bookstore/static/media/search_icon.30c9be57f2f18e0e351fb481ae3466fe.svg",
+    "static/media/menu__burger__icon.svg": "/bookstore/static/media/menu__burger__icon.65de87d5cff832081e60da242c775703.svg",
+    "static/media/search_icon_white.svg": "/bookstore/static/media/search_icon_white.b4319ac093ecc34709529f2b8d3d3af7.svg",
+    "main.c0f7d4f6.css.map": "/bookstore/static/css/main.c0f7d4f6.css.map",
+    "main.9357b132.js.map": "/bookstore/static/js/main.9357b132.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0f7d4f6.css",
+    "static/js/main.9357b132.js"
+  ]
+}
